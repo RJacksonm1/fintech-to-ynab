@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.7.1
 WORKDIR /app
 
 RUN gem install bundler -v 2.1.4
