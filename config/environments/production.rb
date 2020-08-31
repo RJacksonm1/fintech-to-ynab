@@ -66,4 +66,8 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+  
+  # Switching off to run in Google Cloud Run. Internet suggests this is a really
+  # bad idea, but I'm only using it for webhooks and I just want it to woooooork
+  config.hosts.clear
 end
